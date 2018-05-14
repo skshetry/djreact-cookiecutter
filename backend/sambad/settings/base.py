@@ -53,12 +53,11 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     'webpack_loader',
     'rest_framework',
-    'knox',
 ]
 
 # Apps specific for this project go here.
 LOCAL_APPS = [
-    'notes.apps.NotesConfig',
+    'core.apps.CoreConfig',
 ]
 
 # MIDDLEWARE CONFIGURATION
@@ -237,5 +236,7 @@ WEBPACK_LOADER = {
 
 # Rest framework settings
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',),
+    'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework_simplejwt.authentication.JWTAuthentication',),
 }
+
+APPEND_SLASH = True

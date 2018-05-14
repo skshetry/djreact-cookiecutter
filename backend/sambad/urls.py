@@ -19,12 +19,17 @@ from django.views.generic import TemplateView
 from django.conf import settings
 from django.templatetags.static import static as static_tag
 
-from notes import endpoints
+from django.contrib import admin
+
+from rest_framework import schemas
 
 urlpatterns = [
-    url(r'^api/', include(endpoints)),
-    url(r'^api/auth/', include('knox.urls')),
-    url(r'^', TemplateView.as_view(template_name="index.html")),
+    # Include urls here.
+    url(r'api/auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'api/core/', include('core.endpoints')),
+    url(r'api/$', schemas.get_schema_view()),
+    url(settings.ADMIN_URL, admin.site.urls),
+    url(r'$', TemplateView.as_view(template_name="index.html")),
 ]
 
 if settings.DEBUG:
