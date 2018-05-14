@@ -30,6 +30,7 @@
 # and then adding `--settings app.settings.ci` (or similar) to the test command
 stages:
   - test
+  - build
 
 python_test:
   stage: test
@@ -51,10 +52,11 @@ python_test:
 
 js_test:
   image: node:10.1.0-alpine
-  stage: test
+  stage: build
   before_script:
   - node -v
   - npm -v
   - npm install --dev
   script:
+  - npm install jest
   - cd frontend && npm test
