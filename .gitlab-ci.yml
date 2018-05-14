@@ -55,7 +55,8 @@ js_test:
   before_script:
   - node -v
   - npm -v
-  - npm install --dev
+  - cd frontend && npm install --dev
   script:
   - npm install jest
-  - cd frontend && npm test
+  - npm run build
+  - npm test
