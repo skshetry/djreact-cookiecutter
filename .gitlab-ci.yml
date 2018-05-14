@@ -34,7 +34,7 @@ stages:
 
 python_test:
   stage: test
-  image: python:3.6.5-alpine3.7
+  image: python:3.6.5-stretch
   services:
   - postgres:latest
   variables:
@@ -51,7 +51,7 @@ python_test:
 
 
 js_test:
-  image: node:10.1.0-alpine
+  image: node:10.1.0-stretch
   stage: build
   before_script:
   - node -v
