@@ -11,6 +11,7 @@ pytz
 requests
 six
 
+djangorestframework_simplejwt
 
 # Images
 Pillow==4.3.0
