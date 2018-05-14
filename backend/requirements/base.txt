@@ -10,7 +10,7 @@ psycopg2==2.7.3.2
 pytz
 requests
 six
-
+coreapi
 djangorestframework_simplejwt
 
 # Images
