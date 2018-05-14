@@ -1,0 +1,17 @@
+Django==2.0.5
+
+django-environ==0.4.4
+
+django-rest-knox==3.1.4
+django-webpack-loader==0.6.0
+djangorestframework==3.8.2
+# Python-PostgreSQL Database Adapter
+psycopg2==2.7.3.2
+pytz
+requests
+six
+
+
+# Images
+Pillow==4.3.0
+olefile==0.44
