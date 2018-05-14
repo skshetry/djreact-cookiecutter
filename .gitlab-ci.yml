@@ -30,7 +30,6 @@
 # and then adding `--settings app.settings.ci` (or similar) to the test command
 stages:
   - test
-  - build
 
 python_test:
   stage: test
@@ -52,7 +51,7 @@ python_test:
 
 js_test:
   image: node:10.1.0-stretch
-  stage: build
+  stage: test
   before_script:
   - node -v
   - npm -v
