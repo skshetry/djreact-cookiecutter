@@ -46,7 +46,7 @@ python_test:
   script:
   - cd backend && coverage run manage.py test --settings=sambad.settings.testing
   after_script:
-  - coverage report
+  - cd backend && coverage report
 
 
 js_test:
