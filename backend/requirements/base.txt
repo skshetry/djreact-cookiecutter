@@ -1,18 +1,27 @@
-Django==2.0.5
-
-django-environ==0.4.4
-
-django-rest-knox==3.1.4
-django-webpack-loader==0.6.0
+Django==1.11.13
+    pytz==2018.4
 djangorestframework==3.8.2
+django-environ==0.4.4
+    six==1.11.0
+django-webpack-loader==0.6.0
+
 # Python-PostgreSQL Database Adapter
 psycopg2==2.7.3.2
-pytz
-requests
-six
-coreapi
+
+requests==2.18.4
+    certifi==2018.4.16
+    chardet==3.0.4
+    idna==2.6
+    urllib3==1.22
+coreapi==2.3.3
+  coreschema==0.0.4
+    Jinja2==2.10
+      MarkupSafe==1.0
+  itypes==1.1.0
+  uritemplate==3.0.0
 djangorestframework_simplejwt
+    PyJWT==1.6.1
 
 # Images
 Pillow==4.3.0
-olefile==0.44
+    olefile==0.44

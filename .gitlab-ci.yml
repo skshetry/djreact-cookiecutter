@@ -37,7 +37,6 @@ python_test:
   services:
   - postgres:latest
   variables:
-  variables:
     POSTGRES_DB: database_name
     DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/$POSTGRES_DB"
   before_script:
@@ -56,6 +55,9 @@ js_test:
   - node -v
   - npm -v
   - cd frontend && npm install --dev
+  cache:
+    paths:
+      - frontend/node_modules/
   script:
   - npm install jest
   - npm run build
