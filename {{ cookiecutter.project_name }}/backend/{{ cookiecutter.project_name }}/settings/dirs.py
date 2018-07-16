@@ -9,7 +9,7 @@ BACKEND_DIR = ROOT_DIR / 'backend'
 # │   ├── requirements
 # │   ├── requirements.txt
 # │   ├── sambad
-PROJECT_DIR =  BACKEND_DIR / 'sambad'
+PROJECT_DIR =  BACKEND_DIR / '{{cookiecutter.project_name}}'
 # |   |  ├── media
 MEDIA_DIR = PROJECT_DIR / 'media'
 # |   |  ├── settings

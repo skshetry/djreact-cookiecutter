@@ -1,0 +1,7 @@
+{
+  "project_name": null,
+  "project_description": null,
+  "database_username": null,
+  "database_password": null,
+  "_copy_without_render": ["*.html"]
+}
