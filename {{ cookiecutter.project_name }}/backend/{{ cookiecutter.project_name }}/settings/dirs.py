@@ -8,7 +8,7 @@ BACKEND_DIR = ROOT_DIR / 'backend'
 # │   ├── notes
 # │   ├── requirements
 # │   ├── requirements.txt
-# │   ├── sambad
+# │   ├── {{cookiecutter.project_name}}
 PROJECT_DIR =  BACKEND_DIR / '{{cookiecutter.project_name}}'
 # |   |  ├── media
 MEDIA_DIR = PROJECT_DIR / 'media'
