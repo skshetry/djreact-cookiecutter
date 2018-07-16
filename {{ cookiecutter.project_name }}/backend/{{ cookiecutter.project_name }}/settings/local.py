@@ -28,7 +28,7 @@ EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND',
 DATABASES = {
     'default': {  # moving to postgres
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env('POSTGRES_DBNAME', default='{{cookiecutter.project_name}}'),
+        'NAME': env('POSTGRES_DBNAME', default='{{cookiecutter.project_name.lower()}}'),
         'USER': env('POSTGRES_USER'),
         'PASSWORD': env('POSTGRES_PASSWORD'),
         'HOST': env('POSTGRES_HOST', default='localhost'),

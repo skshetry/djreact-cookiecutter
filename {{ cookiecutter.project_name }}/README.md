@@ -13,7 +13,7 @@ In heavy Development with Django and React with <3
       or [pgadmin4](https://www.pgadmin.org/download/)(provides graphical ui).
     - Create database. Open `psql` (or, `pgcli`) and enter following sql query.
     ```sql
-    CREATE DATABASE {{cookiecutter.project_name}}
+    CREATE DATABASE {{cookiecutter.project_name.lower()}}
     ```
     > If you want other database name to be other than `{{cookiecutter.project_name}}`,
     > [you may need to add a environment variable of the database name](#custom-db-name))
@@ -50,7 +50,7 @@ In heavy Development with Django and React with <3
       > Warning: Don't delete `env.example` though.
 
 6.  Open the file and change `user` with database owner(usually the `username`) and `pass` with your database password(usually your user password).
-    - <a name="custom-db-name"></a> If you have set the name of db other than `{{cookiecutter.project_name}}`, you need to uncomment the `#POSTGRES_DBNAME` line and change the value to the db name.
+    - <a name="custom-db-name"></a> If you have set the name of db other than `{{cookiecutter.project_name.lower()}}`, you need to uncomment the `#POSTGRES_DBNAME` line and change the value to the db name.
 7.  `cd backend` if you are not already in.
 8.  Make migrations file and then migrate.
     - `python manage.py makemigrations`
